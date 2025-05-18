@@ -29,4 +29,8 @@
 	  (unless (string-match-p "org$" path)
 	    (push path result)))))
 
+;; Halt on errors in debugging mode
+(setq debug-on-error t)
+
+
 ;;; early-init.el ends here
