@@ -5,10 +5,10 @@
 ;;; Code:
 
 (use-package imenu
-  :straight nil
+  :elpaca nil
   :bind
   (:map meow-leader-keymap
-	("i" ("imenu" . imenu))))
+	("i" . imenu)))
 
 (use-package imenu-list
   :commands imenu-list)

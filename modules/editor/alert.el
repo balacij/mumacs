@@ -5,7 +5,7 @@
 ;; Notifications and alerts.
 
 ;;; Code:
-(require 'core/straight)
+(require 'core/elpaca)
 
 ;; Ensure that `posframe' is properly loaded, and set up autoloads
 ;; for all the functions that we will need.

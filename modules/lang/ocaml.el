@@ -50,7 +50,7 @@
   (tuareg-mode-hook . opam-switch-mode)
   :bind
   (:map opam-switch-mode-map
-	("C-c C-w" ("set switch" . opam-switch-set-switch))))
+	("C-c C-w" . opam-switch-set-switch)))
 
 (use-package dune
   :mode ("dune-project'" "dune'"))

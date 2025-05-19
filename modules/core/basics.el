@@ -7,7 +7,7 @@
 
 ;;; Code:
 
-(require 'core/straight)
+(require 'core/elpaca)
 
 (defun use-package-normalize-advice (_name keyword args)
   ; checkdoc-params: (keyword)
@@ -78,7 +78,7 @@ See Info node `(use-package)Creating an extension'."
 ;; We also want to configure native compilation to use a decent optimization level.
 ;; See (info "(elisp) Native Compilation") for more details.
 (use-package comp
-  :straight nil
+  :elpaca nil
   :demand t
   :if (native-comp-available-p)
   :custom
@@ -99,6 +99,9 @@ See Info node `(use-package)Creating an extension'."
 
 ;; `s.el' provides a more consistent API for string manipulation.
 (use-package s
+  :demand t)
+
+(use-package alert
   :demand t)
 
 (provide 'core/basics)

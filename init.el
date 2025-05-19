@@ -43,8 +43,8 @@
 
 (require 'tools/direnv)
 (require 'tools/magit)
-(require 'tools/notmuch)
-(require 'tools/org)
+;; (require 'tools/notmuch)
+;; (require 'tools/org)
 (require 'tools/ripgrep)
 (require 'tools/vterm)
 

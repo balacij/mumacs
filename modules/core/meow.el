@@ -3,7 +3,6 @@
 ;;; Commentary:
 
 ;;; Code:
-(require 'f)
 
 (defun find-emacs-module ()
   "Open an Emacs configuration module."
@@ -25,6 +24,7 @@
 ;; Modal editing
 (use-package meow
   ;; No way we can defer loading this; we really do need keystrokes to work ASAP.
+  :elpaca t
   :demand t
   :custom
   (meow-use-clipboard t "Use the system clipboard.")
@@ -143,7 +143,7 @@
   (meow-global-mode))
 
 (use-package hippie-exp
-  :straight nil
+  :elpaca nil
   :bind (("M-p" . hippie-expand))
   :custom
   ((hippie-expand-verbose nil)))

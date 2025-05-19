@@ -7,8 +7,6 @@
 ;; backends a bit easier.
 
 ;;; Code:
-(require 'core/straight)
-
 (use-package company
   ;; We could try to defer loading this, but our `:company' handler
   ;; makes this difficult. As such, we just `:demand' it: benchmarking

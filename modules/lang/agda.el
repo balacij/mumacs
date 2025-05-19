@@ -11,7 +11,7 @@
 (require 'editor/snippets)
 
 (use-package agda2-mode
-  :straight nil
+  :elpaca nil
   :load-path "~/.agda/share/2.8.0/emacs-mode/"
   :mode ("\\.lagda\\.md\\'" . agda2-mode)
   :custom
@@ -28,7 +28,7 @@
   (add-to-list 'auto-mode-alist '("\\.lagda\\.md\\'" . agda2-mode)))
 
 (use-package compilation
-  :straight nil
+  :elpaca nil
   :config
   (add-to-list 'compilation-error-regexp-alist-alist
 	       '(agda "^[\s-]*\\(?:at \\)?\\(.*\\):\\([0-9]+\\),\\([0-9]+\\)-\\([0-9]+\\)$" 1 2 (3 . 4) 2 1))
@@ -38,7 +38,7 @@
   ;; We've already done the autoload pass of `agda2-mode', so we don't
   ;; need to fetch `agda-input' from upstream; we already know how to
   ;; `require' it.
-  :straight nil
+  :elpaca nil
   ;; We want to be able to call `set-input-method' with `Agda'
   ;; without opening an agda file, so we force `agda-input' to load
   ;; immediately.

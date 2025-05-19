@@ -4,7 +4,6 @@
 
 ;;; Code:
 (require 'core/meow)
-(require 'core/straight)
 
 (use-package flycheck
   :commands flycheck-mode

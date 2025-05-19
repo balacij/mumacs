@@ -16,7 +16,7 @@
 
 (use-package man
   :commands man
-  :straight nil
+  :elpaca nil
   :custom
   (manual-program "gman")
   :bind
@@ -52,13 +52,14 @@
 
 ;; Override some annoying keybindings in `Info-mode'.
 (use-package info
-  :straight nil
+  :elpaca nil
   :bind
   (:map Info-mode-map
 	("l" . meow-right)
 	("h" . meow-left)))
 
 (use-package marginalia
+  :ensure t
   :commands marginalia-mode
   :init
   (marginalia-mode))

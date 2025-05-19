@@ -5,7 +5,7 @@
 ;;; Code:
 
 (use-package winner
-  :straight nil
+  :elpaca nil
   :demand t
   :hook
   (after-init-hook . winner-mode))

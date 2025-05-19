@@ -4,7 +4,7 @@
 
 ;;; Code:
 (use-package auth-source
-  :straight nil
+  :elpaca nil
   :demand t
   :custom
   (auth-sources

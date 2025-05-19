@@ -15,7 +15,9 @@
 
 ;; Set up a `org' menu for `meow'.
 (defconst meow-org-keymap (define-keymap))
-(meow-define-keys 'leader `("o" . ("org" . ,meow-org-keymap)))
+
+(with-eval-after-load 'meow
+  (meow-define-keys 'leader `("o" . ("org" . ,meow-org-keymap))))
 
 ;; We ensure that `org' is handled via `straight' to make `org-roam' happy.
 (use-package org
@@ -141,7 +143,6 @@ and then invoke `xenops-dwim' with the prefix argument ARG."
         ("C-c C-x C-l" . org-xenops-dwim)))
 
 (use-package org-agenda
-  :straight nil
   :demand t
   :after org
   :custom
@@ -207,7 +208,6 @@ and then invoke `xenops-dwim' with the prefix argument ARG."
 
 ;; `ol-man' provides links to manpages.
 (use-package ol-man
-  :straight nil
   :after org)
 
 ;; Extensible dependencies for `org'.

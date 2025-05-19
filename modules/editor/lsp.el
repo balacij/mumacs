@@ -13,7 +13,7 @@
 (use-package eglot
   ;; Disable for now
   :disabled
-  :straight nil
+  :elpaca nil
   :commands eglot
   :hook
   (eglot-hook . company-mode))
