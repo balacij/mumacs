@@ -5,7 +5,7 @@
 ;;; Code:
 
 (use-package imenu
-  :elpaca nil
+  :ensure nil
   :bind
   (:map meow-leader-keymap
 	("i" . imenu)))

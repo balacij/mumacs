@@ -18,6 +18,7 @@
   (add-to-list 'meow-mode-state-list '(notmuch-show-mode . motion)))
 
 (use-package notmuch
+  :ensure t
   :commands notmuch
   :custom
   (notmuch-show-logo nil)
@@ -47,11 +48,12 @@
     	("SPC" . meow-keypad)))
 
 (use-package ol-notmuch
+  :ensure t
   :after notmuch org
   :demand t)
 
 (use-package sendmail
-  :elpaca nil
+  :ensure nil
   :custom
   (send-mail-function 'sendmail-send-it)
   (sendmail-program "/run/current-system/sw/bin/msmtp")
@@ -61,7 +63,7 @@
 
 
 ;; IMAP idle notifier.
-(require 'alert)
+;; (require 'alert)
 (require 'imap)
 
 (defun imap-idle-filter (on-notify proc string)

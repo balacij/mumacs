@@ -21,6 +21,7 @@
 
 ;; We ensure that `org' is handled via `straight' to make `org-roam' happy.
 (use-package org
+  :ensure t
   ;; HACK: we demand org to get keybindings to work.
   :demand t
   :preface
@@ -199,6 +200,7 @@ and then invoke `xenops-dwim' with the prefix argument ARG."
 
 ;; `org-timeblock' lets get a better daily view.
 (use-package org-timeblock
+  :ensure t
   :commands org-timeblock org-timeblock-list
   :custom-face
   (org-timeblock-teaching-face ((t (:background "#00bcff"))))
@@ -212,6 +214,7 @@ and then invoke `xenops-dwim' with the prefix argument ARG."
 
 ;; Extensible dependencies for `org'.
 (use-package org-edna
+  :ensure t
   :diminish org-edna-mode
   ;; `org-edna-mode' is a global mode, so we shouldn't attach it to `org-mode-hook'.
   ;; Moreover, `org-load-hook' is deprecated, so instead we opt to load it after org,
@@ -244,12 +247,14 @@ Note that in the edna syntax, the IDs don't need to be quoted."
 
 ;; Zotero link integration
 (use-package zotxt
+  :ensure t
   :diminish
   org-zotxt-mode
   :hook
   (org-mode-hook . org-zotxt-mode))
 
 (use-package org-roam
+  :ensure t
   :after org
   :demand t
   :functions
@@ -337,6 +342,7 @@ Note that in the edna syntax, the IDs don't need to be quoted."
         ("y" . org-roam-dailies-goto-yesterday)))
 
 (use-package org-fancy-priorities
+  :ensure t
   :after org
   :diminish org-fancy-priorities-mode
   :hook
@@ -380,6 +386,7 @@ Note that in the edna syntax, the IDs don't need to be quoted."
 ;;     (cl-subsetp (org-get-tags) tags)))
 
 (use-package org-roam-ql
+  :ensure t
   :after org org-roam
   :autoload
   org-roam-ql-agenda-block
@@ -397,6 +404,7 @@ Note that in the edna syntax, the IDs don't need to be quoted."
 ;;   (org-upcoming-modeline-mode 1))
 
 (use-package org-roam-ui
+  :ensure t
   :commands org-roam-ui)
 
 (provide 'tools/org)

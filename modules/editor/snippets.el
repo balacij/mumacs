@@ -11,7 +11,7 @@
 (require 'core/meow)
 
 (use-package yasnippet
-  :elpaca t
+  :ensure t
   :diminish yas-minor-mode
   :hook
   ;; FIXME: should be smarter about deferring this. However, benchmarking

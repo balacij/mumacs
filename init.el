@@ -18,6 +18,9 @@
 (require 'core/vertico)
 (require 'core/backup)
 
+;; ;; Ensure the 'core' things are all processed first
+;; (elpaca-wait)
+
 (require 'editor/alert)
 (require 'editor/auth-source)
 (require 'editor/company)
@@ -43,8 +46,8 @@
 
 (require 'tools/direnv)
 (require 'tools/magit)
-;; (require 'tools/notmuch)
-;; (require 'tools/org)
+(require 'tools/notmuch)
+(require 'tools/org)
 (require 'tools/ripgrep)
 (require 'tools/vterm)
 

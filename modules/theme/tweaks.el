@@ -32,9 +32,5 @@
   :config
   (tab-bar-mode 1))
 
-
-
-
-
 (provide 'theme/tweaks)
 ;;; tweaks.el ends here

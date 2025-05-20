@@ -6,6 +6,7 @@
 (require 'core/meow)
 
 (use-package flycheck
+  :ensure t
   :commands flycheck-mode
   :diminish flycheck-mode
   :custom

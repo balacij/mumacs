@@ -55,7 +55,7 @@
 (setq enable-recursive-minibuffers t)
 
 ;; Start emacs maximized
-(add-to-list 'default-frame-alist '(fullscreen . fullboth))
+;; (add-to-list 'default-frame-alist '(fullscreen . fullboth))
 
 ;; I'm fine with narrowing being enabled.
 (put 'narrow-to-region 'disabled nil)

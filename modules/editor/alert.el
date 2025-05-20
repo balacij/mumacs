@@ -17,6 +17,8 @@
 
 ;; We use `alert.el', along with a custom alert style based off posframes.
 (use-package alert
+  :ensure t
+  :demand t
   :autoload
   alert
   alert-define-style

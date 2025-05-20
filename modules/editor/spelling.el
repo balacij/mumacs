@@ -76,7 +76,7 @@ See Info node `(use-package)Creating an extension'."
 (push :spell-fu (nthcdr (use-package-keyword-index :hook) use-package-keywords))
 
 (use-package ispell
-  :elpaca nil
+  :ensure nil
   :bind
   (:map meow-spelling-keymap
 	("s" . ispell-word)))

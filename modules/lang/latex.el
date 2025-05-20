@@ -40,7 +40,7 @@
   )
 
 (use-package latex
-  :elpaca auctex
+  :ensure auctex
   :hook
   (LaTeX-mode-hook . turn-on-meow-latex)
   (LaTeX-mode-hook . outline-minor-mode)
@@ -64,21 +64,25 @@
 	("S" . LaTeX-section)))
 
 (use-package tex-mode
-  :elpaca nil
+  :ensure nil
   :bind
   (:map latex-mode-map
 	("$" . math-delimiters-insert)))
 
 
 (use-package reftex
-  :elpaca nil
+  :ensure nil
   :hook (LaTeX-mode-hook . turn-on-reftex))
 
 (use-package company-reftex
+  :ensure t
+  :after (reftex company)
   :company
   (LaTeX-mode-hook . company-reftex-citations))
 
 (use-package company-auctex
+  :ensure t
+  :after (auctex company)
   :company
   (LaTeX-mode-hook . (company-auctex-labels company-autex-macros company-auctex-symbols company-auctex-environments)))
 
@@ -125,7 +129,7 @@
 	("C-c C-x C-l" . xenops-dwim)))
 
 (use-package tex-parens
-  :elpaca (tex-parens :type git :host github :repo "ultronozm/tex-parens.el") ;; HACK: This is on GNU ELPA but straight.el can't find it?
+  :ensure (tex-parens :type git :host github :repo "ultronozm/tex-parens.el") ;; HACK: This is on GNU ELPA but straight.el can't find it?
   :hook
   (LaTeX-mode-hook . tex-parens-mode)
   (latex-mode-hook . tex-parens-mode)

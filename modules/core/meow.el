@@ -24,7 +24,7 @@
 ;; Modal editing
 (use-package meow
   ;; No way we can defer loading this; we really do need keystrokes to work ASAP.
-  :elpaca t
+  :ensure t
   :demand t
   :custom
   (meow-use-clipboard t "Use the system clipboard.")
@@ -143,7 +143,7 @@
   (meow-global-mode))
 
 (use-package hippie-exp
-  :elpaca nil
+  :ensure nil
   :bind (("M-p" . hippie-expand))
   :custom
   ((hippie-expand-verbose nil)))
@@ -151,6 +151,7 @@
 ;; Load `which-key' after `meow' to ensure that it gets
 ;; used for `meow-keymap'.
 (use-package which-key
+  :ensure t
   :after meow
   :diminish which-key-mode
   :demand t
@@ -159,6 +160,7 @@
 
 ;; Used for wrapping selection in parens, braces, quotes, etc.
 (use-package surround
+  :ensure t
   :demand t
   :after meow
   :config
@@ -169,6 +171,7 @@
 
 ;; Window management
 (use-package ace-window
+  :ensure t
   :demand t
   :custom
   (aw-dispatch-always t)

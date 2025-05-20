@@ -5,7 +5,8 @@
 ;;; Code:
 
 (use-package modus-themes
-  ;; :demand t
+  :ensure t
+  :demand t
   :config
   (load-theme 'modus-vivendi t))
 

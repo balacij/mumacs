@@ -6,7 +6,7 @@
 (require 'core/meow)
 
 (use-package project
-  :elpaca nil
+  :ensure nil
   ;; Don't bother defering; gets quite fiddly with autoloading,
   ;; and benchmarking shows that this is fast to load.
   :demand t
@@ -24,7 +24,7 @@
 
 (elpaca transient) ;; Make sure we're using an up-to-date copy of transient?
 (use-package disproject
-  :elpaca
+  :ensure
     '(disproject
       :type git
       :host github

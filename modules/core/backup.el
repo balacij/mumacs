@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package files
-  :elpaca nil
+  :ensure nil
   :demand t
   :preface
   (defconst backup-directory

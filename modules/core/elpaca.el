@@ -48,6 +48,8 @@
   ;; Enable use-package :ensure support for Elpaca.
   (elpaca-use-package-mode))
 
+;; (elpaca-wait)
+
 (provide 'core/elpaca)
 
 ;;; elpaca.el ends here

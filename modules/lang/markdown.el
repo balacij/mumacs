@@ -5,7 +5,7 @@
 ;;; Code:
 
 (use-package markdown-mode
-  :elpaca nil
+  :ensure nil
   :spell-fu
   (markdown-mode-hook
    :exclude

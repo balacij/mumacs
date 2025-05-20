@@ -60,6 +60,7 @@ See Info node `(use-package)Creating an extension'."
 ;; We want to load this relatively early so that we can restart emacs nicely
 ;; even if we make a mistake in our config.
 (use-package restart-emacs
+  :ensure t
   :demand t)
 
 ;; `diminish' lets us easily hide active modes from the modeline.
@@ -67,6 +68,7 @@ See Info node `(use-package)Creating an extension'."
 ;; we use it absolutely everywhere, so we want it right
 ;; out the gate.
 (use-package diminish
+  :ensure t
   :demand t
   :functions diminish
   :config
@@ -78,7 +80,7 @@ See Info node `(use-package)Creating an extension'."
 ;; We also want to configure native compilation to use a decent optimization level.
 ;; See (info "(elisp) Native Compilation") for more details.
 (use-package comp
-  :elpaca nil
+  :ensure nil
   :demand t
   :if (native-comp-available-p)
   :custom
@@ -91,18 +93,20 @@ See Info node `(use-package)Creating an extension'."
 
 ;; `dash.el' provides a more consistent API for manipulating lists; see (info "(dash) Top") for docs.
 (use-package dash
+  :ensure t
   :demand t)
 
 ;; `f.el' provides a more consistent API for filepath manipulation.
 (use-package f
+  :ensure t
   :demand t)
 
 ;; `s.el' provides a more consistent API for string manipulation.
 (use-package s
+  :ensure t
   :demand t)
 
-(use-package alert
-  :demand t)
+(elpaca-process-queues)
 
 (provide 'core/basics)
 ;;; basics.el ends here

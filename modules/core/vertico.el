@@ -8,7 +8,7 @@
 
 (use-package vertico
   :ensure t
-  ;; :elpaca (:files (:defaults "extensions/*"))
+  ;; :ensure (:files (:defaults "extensions/*"))
   :commands vertico-mode
   :init
   (vertico-mode)
@@ -30,7 +30,7 @@
 
 ;; `ctrlf' is a handy way of searching within a buffer.
 (use-package ctrlf
-  :elpaca t
+  :ensure t
   :commands ctrlf-forward-literal ctrlf-backward-literal
   :functions ctrlf-change-search-style
   :preface
